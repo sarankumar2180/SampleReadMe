@@ -11,18 +11,20 @@ This section shows you the prerequisites you need for testing **Mirrorfly Sample
 The minimum requirements to run the Sample App:
 
 ```groovy
-- Android Lollipop 5.0 (API Level 21) or above
-- Java 7 or higher
-- Gradle 4.1.0 or higher
+- Xcode 14.1 or later
+- iOS 12.1 or later
+- Swift 5.0 or later
 ```
-> **Note :** If you're utilizing Chat SDK version 7.11.4 or higher, it's necessary to adjust the target SDK version to 34. This is due to the migration of Chat SDK to Android 14.
+> **Note :** Before proceeding with CONTUS MirrorFly Chat SDK integration, there must be an SDK license key that needs to be obtained for your MirrorFly application.
 
 ## Getting started
 This section explains the steps you need to take before testing the sample app.
 
-**Step 1:** Create a new project or Open an existing project in Android Studio
+**Step 1:** Create a new project
+To get started, open Xcode, create a new Swift Project
 
-**Step 2:** If using `Gradle 6.8` or higher, add the following code to your settings.gradle file. If using `Gradle 6.7` or lower, add the following code to your root build.gradle file. See <a href="https://docs.gradle.org/6.8/release-notes.html#dm-features" target="_self">this release note</a> to learn more about updates to Gradle.
+
+**Step 2:** If you have not initiated any pods project before, then initiate the one. Now, add the required pods that are necessary for the SDK to execute the process perfectly.
 
 ```gradle
 dependencyResolutionManagement {
