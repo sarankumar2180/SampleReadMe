@@ -11,11 +11,10 @@ This section shows you the prerequisites you need for testing **Mirrorfly Sample
 The minimum requirements to run the Sample App:
 
 ```groovy
-- Xcode 14.1 or later
-- iOS 12.1 or later
+- Xcode 15 or later
+- iOS 13.0 or later
 - Swift 5.0 or later
 ```
-> **Note :** Before proceeding with CONTUS MirrorFly Chat SDK integration, there must be an SDK license key that needs to be obtained for your MirrorFly application.
 
 ## Getting started
 This section explains the steps you need to take before testing the sample app.
