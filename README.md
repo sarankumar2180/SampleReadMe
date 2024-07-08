@@ -121,7 +121,7 @@ override func didReceive(_ request: UNNotificationRequest, withContentHandler co
 In `ShareKitViewModel` initialize function add SDK initialize method with valid Licensekey
 
 ```gradle
- private func initialize() {
+ func initialize() {
     ChatManager.initializeSDK(licenseKey: LICENSE_KEY) { isSuccess, error, data in
 
     }
