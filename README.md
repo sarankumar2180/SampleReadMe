@@ -17,11 +17,16 @@ The minimum requirements to run the Sample App:
 ```
 
 ## Getting started
-This section explains the steps you need to take before testing the sample app.
 
-**Step 1:** Create a new project
-To get started, open Xcode, create a new Swift Project
+This section gives you information you need to get started with MirrorFly UIKit for iOS.
 
+**Try the sample app**
+
+Our sample app has all the core features of MirrorFly UIKit for iOS. Download the app from our GitHub repository to get an idea of what you can build with the actual UIKit before building your own project.
+
+**Step 1:** Install UIKit for iOS
+
+UIKit for iOS can be installed through <a href="https://cocoapods.org/" target="_self">CocoaPods console</a>
 
 **Step 2:** If you have not initiated any pods project before, then initiate the one. Now, add the required pods that are necessary for the SDK to execute the process perfectly.
 
