@@ -68,19 +68,19 @@ $ pod install
 $ pod update
 ```
 
+**Step 2:** Get `GoogleSerive-Info Plist` API Key and Adding to your `MirrorFlyUIKit-Info Plist`
+```gradle
+<key>googleApiKey</key>
+<string>****************</string>
+<key>googleApiKeyStaticMap</key>
+<string>****************</string>
+<key>googleApiKey_Translation</key>
+<string>****************</string>
+```
+
 **Step 2:** To log in and run the app, you need to add the LICENCSE key in the app. To generate the license key, you need to sign up in the <a href="https://console.mirrorfly.com/" target="_self">MirrorFly console</a> , and you can get it from there.
 
-**Step 3:** Adding to your info.plist
-   ```gradle
-	<key>googleApiKey</key>
-	<string>****************</string>
-	<key>googleApiKeyStaticMap</key>
-	<string>****************</string>
-	<key>googleApiKey_Translation</key>
-	<string>****************</string>
-   ```
-
-**Step 4:** Initialize with License Key.
+**Step 3:** Initialize with License Key.
 
 You can copy the license key from the **Overview** section in the Console dashboard.
    ```gradle
