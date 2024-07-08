@@ -80,9 +80,9 @@ $ pod update
 <string>****************</string>
 ```
 
-**Step 2:** To log in and run the app, you need to add the LICENCSE key in the app. To generate the license key, you need to sign up in the <a href="https://console.mirrorfly.com/" target="_self">MirrorFly console</a> , and you can get it from there.
+**Step 3:** To log in and run the app, you need to add the LICENCSE key in the app. To generate the license key, you need to sign up in the <a href="https://console.mirrorfly.com/" target="_self">MirrorFly console</a> , and you can get it from there.
 
-**Step 3:** Initialize with License Key.
+**Step 4:** Initialize with License Key.
 
 You can copy the license key from the Overview section in the Console dashboard and paste it in the Appdelegate like below.
    ```gradle
