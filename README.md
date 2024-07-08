@@ -70,15 +70,6 @@ $ pod update
 
 **Step 2:** To log in and run the app, you need to add the LICENCSE key in the app. To generate the license key, you need to sign up in the <a href="https://console.mirrorfly.com/" target="_self">MirrorFly console</a> , and you can get it from there.
 
-
-**Step 3:** Initialize with License Key.
-
-You can copy the license key from the **'Overview’** section in the Console dashboard.
-   ```gradle
-let LICENSE_KEY = "xxxxxxxxxxxxxxxxxxxxxx" //"YOUR_LICENSE_KEY"
-   ```
-To integrate and run Mirrorfly UIKit in your app, you need to initialize it first. Initialize the MirrorFlyUI instance through your view controller
-
 **Step 3:** Adding to your info.plist
    ```gradle
 	<key>googleApiKey</key>
@@ -88,4 +79,33 @@ To integrate and run Mirrorfly UIKit in your app, you need to initialize it firs
 	<key>googleApiKey_Translation</key>
 	<string>****************</string>
    ```
+
+**Step 4:** Initialize with License Key.
+
+You can copy the license key from the **Overview** section in the Console dashboard.
+   ```gradle
+let LICENSE_KEY = "xxxxxxxxxxxxxxxxxxxxxx" //"YOUR_LICENSE_KEY"
+   ```
+To integrate and run Mirrorfly UIKit in your app, you need to initialize it first. Initialize the MirrorFlyUI instance through your view controller
+
+> **Note :**  Use below to configure SDK in AppDelegate.
+
+## Initialize ChatSDK
+
+Add the following import statement below before accessing SDK anywhere in your project.
+
+```gradle
+import MirrorFlySDK
+```
+In `Appdelegate` didFinishLaunchingWithOptions function add SDK initialize method with valid Licensekey
+
+```gradle
+ func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    ChatManager.initializeSDK(licenseKey: licenseKey) { isSuccess, error, data in
+
+    }
+ }
+```
+
+
 
