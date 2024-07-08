@@ -40,18 +40,14 @@ target YOUR_PROJECT_TARGET do
     pod 'MirrorflyUIKit'
 end
    ```
-2. Install the `MirrorflyUIKit` framework through CocoaPods.
-```gradle
-$ pod install
-```
 
-3. Add the below given pod hook code block at the end of the pod file and thus, finally install the pods.
+2. Add the below given pod hook code block at the end of the pod file and thus, finally install the pods.
 
 ```gradle
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.1'
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
       config.build_settings['ENABLE_BITCODE'] = 'NO'
       config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'No'
       config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
@@ -59,6 +55,17 @@ post_install do |installer|
   end
 end
 
+```
+
+3. Install the `MirrorflyUIKit` framework through `CocoaPods`.
+   
+```gradle
+$ pod install
+```
+4. Update the `MirrorflyUIKit` framework through `CocoaPods`.
+   
+```gradle
+$ pod update
 ```
 
 **Step 3:** Adding **Photo library usage description** to your info.plist
