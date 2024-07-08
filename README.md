@@ -89,8 +89,6 @@ You can copy the license key from the Overview section in the Console dashboard 
 let LICENSE_KEY = "xxxxxxxxxxxxxxxxxxxxxx" //"YOUR_LICENSE_KEY"
    ```
 
-> **Note :**  Use below to configure SDK in AppDelegate.
-
 ## Initialize ChatSDK
 
 Add the following import statement below before accessing SDK anywhere in your project.
