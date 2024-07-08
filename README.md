@@ -101,10 +101,29 @@ In `Appdelegate` didFinishLaunchingWithOptions function add SDK initialize metho
 
 ```gradle
  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    ChatManager.initializeSDK(licenseKey: licenseKey) { isSuccess, error, data in
+    ChatManager.initializeSDK(licenseKey: LICENSE_KEY) { isSuccess, error, data in
 
     }
  }
+```
+
+In `NotificationService` didReceive function add SDK initialize method with valid Licensekey
+
+```gradle
+override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
+    ChatManager.initializeSDK(licenseKey: LICENSE_KEY) { isSuccess, error, data in
+
+    }
+}
+```
+In `ShareKitViewModel` initialize function add SDK initialize method with valid Licensekey
+
+```gradle
+ private func initialize() {
+    ChatManager.initializeSDK(licenseKey: LICENSE_KEY) { isSuccess, error, data in
+
+    }
+}
 ```
 
 
