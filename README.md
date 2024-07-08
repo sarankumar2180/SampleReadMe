@@ -26,15 +26,26 @@ Our sample app has all the core features of MirrorFly UIKit for iOS. Download th
 
 **Step 1:** Install UIKit for iOS
 
-UIKit for iOS can be installed through <a href="https://cocoapods.org/" target="_self">CocoaPods console</a>
+UIKit for iOS can be installed through <a href="https://cocoapods.org/" target="_self">CocoaPods</a>
 
-**Step 2:** If you have not initiated any pods project before, then initiate the one. Now, add the required pods that are necessary for the SDK to execute the process perfectly.
+**- CocoaPods**
+
+1. Add `MirrorflyUIKit` into your `Podfile` in Xcode as below:
 
 ```gradle
-pod 'MirrorflyUIKit', '3.2.0'
-   ```
+platform :ios, '13.0'
+use_frameworks!
 
-Add the below given pod hook code block at the end of the pod file and thus, finally install the pods.
+target YOUR_PROJECT_TARGET do
+    pod 'MirrorflyUIKit'
+end
+   ```
+2. Install the `MirrorflyUIKit` framework through CocoaPods.
+```gradle
+$ pod install
+```
+
+3. Add the below given pod hook code block at the end of the pod file and thus, finally install the pods.
 
 ```gradle
 post_install do |installer|
