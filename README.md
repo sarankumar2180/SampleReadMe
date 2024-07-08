@@ -68,16 +68,24 @@ $ pod install
 $ pod update
 ```
 
-**Step 3:** Adding **Photo library usage description** to your info.plist
-   ```gradle
-Privacy - Photo Library Usage description 
-   ```
+**Step 2:** To log in and run the app, you need to add the LICENCSE key in the app. To generate the license key, you need to sign up in the <a href="https://console.mirrorfly.com/" target="_self">MirrorFly console</a> , and you can get it from there.
 
-**Step 4:** Initialize with License Key.
+
+**Step 3:** Initialize with License Key.
 
 You can copy the license key from the **'Overview’** section in the Console dashboard.
    ```gradle
 let LICENSE_KEY = "xxxxxxxxxxxxxxxxxxxxxx" //"YOUR_LICENSE_KEY"
-let USER_ID = "xxxxxxxxxxxxxxxxxxxxxx"
    ```
 To integrate and run Mirrorfly UIKit in your app, you need to initialize it first. Initialize the MirrorFlyUI instance through your view controller
+
+**Step 3:** Adding to your info.plist
+   ```gradle
+	<key>googleApiKey</key>
+	<string>****************</string>
+	<key>googleApiKeyStaticMap</key>
+	<string>****************</string>
+	<key>googleApiKey_Translation</key>
+	<string>****************</string>
+   ```
+
