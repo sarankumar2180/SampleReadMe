@@ -126,5 +126,5 @@ In `ShareKitViewModel` initialize function add SDK initialize method with valid 
 }
 ```
 
-
+Feel free to proceed with running the app once you've gone through all the provided information.
 
