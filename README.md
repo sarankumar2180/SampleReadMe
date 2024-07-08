@@ -27,58 +27,35 @@ To get started, open Xcode, create a new Swift Project
 **Step 2:** If you have not initiated any pods project before, then initiate the one. Now, add the required pods that are necessary for the SDK to execute the process perfectly.
 
 ```gradle
-dependencyResolutionManagement {
-        repositories {
-            mavenCentral()
-               maven {
-                 url "https://repo.mirrorfly.com/release"
-                 }
-       }
-}
+pod 'MirrorflyUIKit', '3.2.0'
    ```
 
-**Step 3:** Add the following dependencies in the app/build.gradle file.
-   ```gradle
- apply plugin: 'com.android.application'
+Add the below given pod hook code block at the end of the pod file and thus, finally install the pods.
 
-android {
-    buildFeatures {
-        viewBinding true
-    }
+```gradle
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.1'
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+      config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'No'
+      config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+    end
+  end
+end
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-}
-
-dependencies {
-      implementation 'com.mirrorfly.sdk:MirrorFlySDK:7.13.0'
-}
-   ```
-
-**Step 4:** Add the below line in the gradle.properties file, to avoid imported library conflicts.
-   ```gradle
-   android.enableJetifier=true
-   ```
-
-**Step 5:** Open the AndroidManifest.xml and add below permissions.
-   ```xml
-   <uses-permission android:name="android.permission.INTERNET" />
-   ```
-**Step 6:** To log in and run the app, you need to add the **LICENCSE** key in the app/build.gradle file. To generate the license key, you need to sign up in the <a href="https://console.mirrorfly.com/" target="_self">MirrorFly console</a>, and you can get it from there.
-   ```gradle
-        debug {
-            buildConfigField 'Boolean', 'IS_QA_BUILD', 'true'
-            buildConfigField 'String', 'LICENSE', '"Please enter your License key"' // add your license key
-            buildConfigField 'String', 'WEB_CHAT_LOGIN', '"https://webchat-preprod-sandbox.mirrorfly.com/"'
-            buildConfigField "String", "SUPPORT_MAIL", '"contussupport@gmail.com"'
-            resValue("string", "app_name", "UI Kit")
-            shrinkResources false
-            debuggable true
-            minifyEnabled false
-            signingConfig signingConfigs.config
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
 ```
-After saving your build.gradle file, click the Sync button to apply all the changes.
+
+**Step 3:** Adding **Photo library usage description** to your info.plist
+   ```gradle
+Privacy - Photo Library Usage description 
+   ```
+
+**Step 4:** Initialize with License Key.
+
+You can copy the license key from the **'Overview’** section in the Console dashboard.
+   ```gradle
+let LICENSE_KEY = "xxxxxxxxxxxxxxxxxxxxxx" //"YOUR_LICENSE_KEY"
+let USER_ID = "xxxxxxxxxxxxxxxxxxxxxx"
+   ```
+To integrate and run Mirrorfly UIKit in your app, you need to initialize it first. Initialize the MirrorFlyUI instance through your view controller
