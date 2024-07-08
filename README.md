@@ -24,20 +24,20 @@ This section gives you information you need to get started with MirrorFly UIKit 
 
 Our sample app has all the core features of MirrorFly UIKit for iOS. Download the app from our GitHub repository to get an idea of what you can build with the actual UIKit before building your own project.
 
-**Step 1:** Install UIKit for iOS
+**Step 1:** Install SDK for iOS
 
-UIKit for iOS can be installed through <a href="https://cocoapods.org/" target="_self">CocoaPods</a>
+SDK for iOS can be installed through <a href="https://cocoapods.org/" target="_self">CocoaPods</a>
 
 **- CocoaPods**
 
-1. Add `MirrorflyUIKit` into your `Podfile` in Xcode as below:
+1. Add `MirrorflySDK` into your `Podfile` in Xcode as below:
 
 ```gradle
 platform :ios, '13.0'
 use_frameworks!
 
 target YOUR_PROJECT_TARGET do
-    pod 'MirrorflyUIKit'
+    pod 'MirrorflySDK'
 end
    ```
 
@@ -50,19 +50,21 @@ post_install do |installer|
       config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
       config.build_settings['ENABLE_BITCODE'] = 'NO'
       config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'No'
+      config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
       config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+      config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
     end
   end
 end
 
 ```
 
-3. Install the `MirrorflyUIKit` framework through `CocoaPods`.
+3. Install the `MirrorflySDK` framework through `CocoaPods`.
    
 ```gradle
 $ pod install
 ```
-4. Update the `MirrorflyUIKit` framework through `CocoaPods`.
+4. Update the `MirrorflySDK` framework through `CocoaPods`.
    
 ```gradle
 $ pod update
