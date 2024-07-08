@@ -22,7 +22,7 @@ This section gives you information you need to get started with MirrorFly UIKit 
 
 **Try the sample app**
 
-Our sample app has all the core features of MirrorFly UIKit for iOS. Download the app from our GitHub repository to get an idea of what you can build with the actual UIKit before building your own project.
+Our sample app has all the core features of MirrorFly SDK with an integrated UI. You can download the source code from our GitHub repository to get an idea of what you can build with the actual UI before building your own project.
 
 **Step 1:** Install SDK for iOS
 
@@ -84,11 +84,10 @@ $ pod update
 
 **Step 3:** Initialize with License Key.
 
-You can copy the license key from the **Overview** section in the Console dashboard.
+You can copy the license key from the Overview section in the Console dashboard and paste it in the Appdelegate like below.
    ```gradle
 let LICENSE_KEY = "xxxxxxxxxxxxxxxxxxxxxx" //"YOUR_LICENSE_KEY"
    ```
-To integrate and run Mirrorfly UIKit in your app, you need to initialize it first. Initialize the MirrorFlyUI instance through your view controller
 
 > **Note :**  Use below to configure SDK in AppDelegate.
 
@@ -128,5 +127,5 @@ In `ShareKitViewModel` initialize function add SDK initialize method with valid 
 }
 ```
 
-Feel free to proceed with running the app once you've gone through all the provided information.
+Feel free to proceed with running the app once you've gone through all the provided information. Please check our official docs <a href="https://www.mirrorfly.com/docs/" target="_self">MirrorFly Docs</a> to know more about MirrorFlySDK.
 
